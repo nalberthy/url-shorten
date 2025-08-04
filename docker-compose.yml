@@ -1,0 +1,28 @@
+services:
+  # Postgres
+  postgres:
+    container_name: url-shortener-postgres
+    image: postgres:15-alpine
+    hostname: postgres
+    environment:
+      POSTGRES_PASSWORD: 'Postgres2025'
+    ports:
+      - 15432:5432
+    networks:
+      - url-shortener-network
+      
+  # Redis
+  redis:
+    container_name: url-shortener-redis
+    image: redis:6.0
+    ports:
+      - 6379:6379
+    networks:
+      - url-shortener-network
+
+volumes:
+  postgres_data:
+
+networks:
+  url-shortener-network:
+    driver: bridge
