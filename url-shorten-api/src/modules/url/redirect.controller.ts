@@ -10,7 +10,10 @@ export class RedirectController {
 
   @Get(':code')
   @ApiOperation({ summary: 'Redirect to original URL' })
-  @ApiResponse({ status: HttpStatus.FOUND, description: 'Successful redirection' })
+  @ApiResponse({
+    status: HttpStatus.FOUND,
+    description: 'Successful redirection',
+  })
   @ApiResponse({ status: HttpStatus.NOT_FOUND, description: 'Code not found' })
   async redirect(@Param('code') code: string, @Res() res: Response) {
     try {

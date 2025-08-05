@@ -10,22 +10,24 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const port = Number(PORT || '5000');
 
-  app.useGlobalPipes(new ValidationPipe({
-    transform: true,
-    whitelist: true,
-  }));
+  app.useGlobalPipes(
+    new ValidationPipe({
+      transform: true,
+      whitelist: true,
+    }),
+  );
 
   app.enableCors();
-  
+
   const config = new DocumentBuilder()
     .setTitle('URL Shortener')
     .setDescription('URL shortening system')
     .setVersion('2.0')
     .build();
-  
+
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api/docs', app, document);
-  
+
   app.listen(port).then(() => {
     logger.log(`Listening on port ${port}`);
   });
