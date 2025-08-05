@@ -13,7 +13,10 @@ Funcionalidades essenciais de encurtamento, redirecionamento e estatísticas sim
 - **Listagem**: Ver todas as URLs criadas
 - **Estatísticas Básicas**: Total de URLs, cliques e top URLs
 - **API Documentada**: Swagger UI integrado
-
+- **Autenticação**: JWT + Passport.js
+- **Hash de Senhas**: bcrypt
+- **Guards**: JWT Auth Guard, Optional Auth Guard (acessos com e sem authenticação)
+- **Estratégias**: Local Strategy, JWT Strategy
 
 ## Instalação
 

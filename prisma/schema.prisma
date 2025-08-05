@@ -7,6 +7,21 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String
+  password  String
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+
+  urls Url[]
+
+  @@map("users")
+}
+
 model Url {
   id          String   @id @default(cuid())
   originalUrl String
@@ -14,9 +29,14 @@ model Url {
   customCode  String?  @unique
   clickCount  Int      @default(0)
   isActive    Boolean  @default(true)
+  isPublic    Boolean  @default(true)
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   deletedAt   DateTime? @map("deleted_at")
+
+
+  userId String?
+  user   User?   @relation(fields: [userId], references: [id], onDelete: SetNull)
 
   @@map("urls")
 }

@@ -10,12 +10,12 @@ export class RedirectController {
 
   @Get(':code')
   @ApiOperation({ summary: 'Redirect to original URL' })
-  @ApiResponse({ status: HttpStatus.MOVED_PERMANENTLY, description: 'Successful redirection' })
+  @ApiResponse({ status: HttpStatus.FOUND, description: 'Successful redirection' })
   @ApiResponse({ status: HttpStatus.NOT_FOUND, description: 'Code not found' })
   async redirect(@Param('code') code: string, @Res() res: Response) {
     try {
       const url = await this.urlService.findByCode(code);
-      return res.redirect(HttpStatus.MOVED_PERMANENTLY, url.originalUrl);
+      return res.redirect(HttpStatus.FOUND, url.originalUrl);
     } catch (error) {
       return res.status(HttpStatus.NOT_FOUND).json({
         message: 'URL not found',

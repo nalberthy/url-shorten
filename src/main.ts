@@ -20,7 +20,7 @@ async function bootstrap() {
   const config = new DocumentBuilder()
     .setTitle('URL Shortener')
     .setDescription('URL shortening system')
-    .setVersion('1.0')
+    .setVersion('2.0')
     .build();
   
   const document = SwaggerModule.createDocument(app, config);
