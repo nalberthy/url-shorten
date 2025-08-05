@@ -14,7 +14,9 @@ jest.mock('bcrypt', () => ({
 
 describe('AuthService', () => {
   let service: AuthService;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let userService: UserService;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let jwtService: JwtService;
 
   const mockUserService = {

@@ -11,6 +11,7 @@ jest.mock('nanoid', () => ({
 
 describe('UrlService', () => {
   let service: UrlService;
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   let prismaService: PrismaService;
 
   let mockPrismaService;
