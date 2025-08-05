@@ -1,10 +1,17 @@
-import { IsString, IsUrl, IsOptional, Length, IsBoolean } from 'class-validator';
+import {
+  IsString,
+  IsUrl,
+  IsOptional,
+  Length,
+  IsBoolean,
+} from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateUrlDto {
   @ApiProperty({
     description: 'Original URL to shorten',
-    example: 'https://teddy360.com.br/material/marco-legal-das-garantias-sancionado-entenda-o-que-muda'
+    example:
+      'https://teddy360.com.br/material/marco-legal-das-garantias-sancionado-entenda-o-que-muda',
   })
   @IsUrl({}, { message: 'URL must be valid' })
   originalUrl: string;
@@ -12,7 +19,7 @@ export class CreateUrlDto {
   @ApiProperty({
     description: 'Custom code (optional)',
     example: 'mycustomcode',
-    required: false
+    required: false,
   })
   @IsOptional()
   @IsString()
@@ -23,7 +30,7 @@ export class CreateUrlDto {
     description: 'URL is public',
     example: true,
     required: false,
-    default: true
+    default: true,
   })
   @IsOptional()
   @IsBoolean()
