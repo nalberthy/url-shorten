@@ -46,4 +46,4 @@ docker-compose up
 
 - **Aplicação**: http://localhost:5000 ou https://url-shorten-api-fxzp.onrender.com/
 - **Documentação Swagger**: http://localhost:5000/api/docs ou https://url-shorten-api-fxzp.onrender.com/api/docs
-- **Postman Collection**: [Documentação pronta para teste direto](https://github.com/nalberthy/url-shorten/blob/feat/collections/collection/V2%20-%20URL%20Shorten.json)
+- **Postman Collection**: [Collection pronta para teste direto](https://github.com/nalberthy/url-shorten/blob/feat/collections/collection/V2%20-%20URL%20Shorten.json)
