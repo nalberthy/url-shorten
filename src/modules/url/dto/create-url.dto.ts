@@ -1,4 +1,4 @@
-import { IsString, IsUrl, IsOptional, Length } from 'class-validator';
+import { IsString, IsUrl, IsOptional, Length, IsBoolean } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class CreateUrlDto {
@@ -18,4 +18,14 @@ export class CreateUrlDto {
   @IsString()
   @Length(3, 20, { message: 'Code must be between 3 and 20 characters long' })
   customCode?: string;
+
+  @ApiProperty({
+    description: 'URL is public',
+    example: true,
+    required: false,
+    default: true
+  })
+  @IsOptional()
+  @IsBoolean()
+  isPublic?: boolean = true;
 }
