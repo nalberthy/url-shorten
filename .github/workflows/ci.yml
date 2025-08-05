@@ -2,7 +2,7 @@ name: CI - Lint
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main, develop, feat/workflow-github ]
   pull_request:
     branches: [ main, develop ]
 
