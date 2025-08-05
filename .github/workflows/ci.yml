@@ -19,7 +19,5 @@ jobs:
           node-version: '20'
 
       - run: npm ci
-        working-directory: ./url-shorten-api
-
       - run: npm run lint
-        working-directory: ./url-shorten-api
+
