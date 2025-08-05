@@ -1,6 +1,6 @@
 {
   "name": "url-shortener",
-  "version": "2.2.0",
+  "version": "2.1.1",
   "description": "Basic URL Shortener - nb",
   "main": "dist/main.js",
   "scripts": {
