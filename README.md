@@ -46,4 +46,4 @@ docker-compose up
 
 - **Aplicação**: http://localhost:5000
 - **Documentação**: http://localhost:5000/api/docs
-- **Postman Collection**: [Endpoints prontos para teste direto](https://raw.githubusercontent.com/nalberthy/url-shorten/refs/heads/feat/collections/collection/V2%20-%20URL%20Shorten.json?token=GHSAT0AAAAAADH2A4XSDXQGR4YNI7ZXS2KY2ESIH6Q)
+- **Postman Collection**: [Endpoints prontos para teste direto](https://github.com/nalberthy/url-shorten/blob/feat/collections/collection/V2%20-%20URL%20Shorten.json)
