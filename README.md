@@ -31,6 +31,16 @@ npm run db:push
 npm run start:dev
 ```
 
+## Rodar com docker
+Garanta que a variável de ambiente (conexão com banco) esteja definida de acordo com tipo de execução.
+
+```bash
+# Entrar na pasta do projeto e preparar a aplicação
+cd url-shorten-api && npm install && cd ..
+
+# Iniciar a aplicação com Docker
+docker-compose up
+```
 
 ### Links
 
