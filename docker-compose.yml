@@ -20,6 +20,20 @@ services:
     networks:
       - url-shortener-network
 
+  # Api
+  api:
+    build:
+      context: ./url-shorten-api      
+      dockerfile: Dockerfile.development
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./url-shorten-api:/app
+    networks:
+      - url-shortener-network
+    depends_on:
+      - postgres
+
 volumes:
   postgres_data:
 
