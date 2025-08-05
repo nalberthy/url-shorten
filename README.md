@@ -1,0 +1,35 @@
+# URL Shortener
+
+## Descrição
+Funcionalidades essenciais de encurtamento, redirecionamento e estatísticas simples.
+
+## Funcionalidades
+
+### Recursos atuais
+- **Encurtamento de URLs**: Criar links curtos automaticamente
+- **Códigos Personalizados**: Permitir códigos customizados pelo usuário
+- **Redirecionamento**: Redirecionar para URL original
+- **Contagem de Cliques**: Rastrear quantas vezes cada URL foi acessada
+- **Listagem**: Ver todas as URLs criadas
+- **Estatísticas Básicas**: Total de URLs, cliques e top URLs
+- **API Documentada**: Swagger UI integrado
+
+
+## Instalação
+
+```bash
+# Instalar dependências
+npm install
+
+# Subir versão modelada do banco
+npm run db:push
+
+# Iniciar aplicação
+npm run start:dev
+```
+
+
+### Links
+
+- **Aplicação**: http://localhost:5000
+- **Documentação**: http://localhost:5000/api/docs
