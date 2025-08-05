@@ -2,7 +2,7 @@ name: CI - Lint
 
 on:
   push:
-    branches: [ main, develop, feat/workflow-github ]
+    branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
 
@@ -11,7 +11,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
@@ -19,5 +18,7 @@ jobs:
           node-version: '20'
 
       - run: npm ci
-      - run: npm run lint
+        working-directory: ./url-shorten-api
 
+      - run: npm run lint
+        working-directory: ./url-shorten-api
